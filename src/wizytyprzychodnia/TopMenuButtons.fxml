@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wizytyprzychodnia.TopMenuButtonsController">
+   <children>
+      <ToggleButton fx:id="btn_addPatient" mnemonicParsing="false" onAction="#handleOpenPatient" prefHeight="100.0" prefWidth="200.0" text="Pacjenci">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleButtons" />
+         </toggleGroup>
+         <graphic>
+            <ImageView fitHeight="90.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/patient.png" />
+               </image>
+            </ImageView>
+         </graphic></ToggleButton>
+      <ToggleButton fx:id="btn_addDoctor" mnemonicParsing="false" onAction="#handleOpenDoctor" prefHeight="100.0" prefWidth="200.0" text="Lekarze" toggleGroup="$toggleButtons">
+         <graphic>
+            <ImageView fitHeight="88.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/doctor.png" />
+               </image>
+            </ImageView>
+         </graphic></ToggleButton>
+      <ToggleButton fx:id="btn_addvisit" mnemonicParsing="false" onAction="#handleOpenVisit" prefHeight="100.0" prefWidth="200.0" text="Wizyty" toggleGroup="$toggleButtons">
+         <graphic>
+            <ImageView fitHeight="92.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/appointment.png" />
+               </image>
+            </ImageView>
+         </graphic></ToggleButton>
+      <ToggleButton fx:id="btn_addStatistic" mnemonicParsing="false" onAction="#handleOpenStatistic" prefHeight="100.0" prefWidth="200.0" text="Statystyki" toggleGroup="$toggleButtons">
+         <graphic>
+            <ImageView fx:id="btn_Statistics" fitHeight="83.0" fitWidth="94.0" onDragDetected="#handleOpenStatistic" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/statistics.png" />
+               </image>
+            </ImageView>
+         </graphic></ToggleButton>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

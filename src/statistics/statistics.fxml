@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="956.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btn_Home" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleReturnToHome" prefHeight="64.0" prefWidth="231.0" styleClass="topPane" text="Powrót do głownego menu" />
+   </children>
+</AnchorPane>

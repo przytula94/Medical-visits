@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1128.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visit.VisitController">
+   <children>
+      <Button fx:id="btn_Home" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleReturnToHome" prefHeight="95.0" prefWidth="240.0" styleClass="topPane" stylesheets="@../css/style.css" text="Powrtó do głównego menu" />
+      <TableView fx:id="table_Wizyty" layoutX="95.0" layoutY="182.0" prefHeight="448.0" prefWidth="949.0">
+        <columns>
+          <TableColumn fx:id="txt_Imie" prefWidth="92.0" text="Imie" />
+          <TableColumn fx:id="txt_Nazwisko" prefWidth="103.0" text="Nazwisko" />
+            <TableColumn fx:id="txt_PESEL" prefWidth="163.0" text="PESEL" />
+            <TableColumn fx:id="txt_DataWizyty" prefWidth="178.0" text="Data Wizyty" />
+            <TableColumn fx:id="txt_GodzinaWizyty" prefWidth="157.0" text="Godzina Wizyty" />
+            <TableColumn fx:id="txt_Lekarz" prefWidth="270.0" text="Lekarz" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txt_search" layoutX="895.0" layoutY="145.0" />
+      <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="1019.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/lupa.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

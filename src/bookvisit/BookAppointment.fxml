@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.validation.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookvisit.BookAppointmentController">
+   <children>
+      <Button fx:id="btn_Home" layoutX="43.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleReturnToHome" prefHeight="64.0" prefWidth="212.0" styleClass="topPane" stylesheets="@../css/style.css" text="Powrót do głównego menu" />
+      <TextField fx:id="txt_Search" layoutX="56.0" layoutY="191.0" onKeyTyped="#handleSearchPesel" promptText="Wprowadź PESEL" />
+      <ImageView fitHeight="31.0" fitWidth="25.0" layoutX="178.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/lupa.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txt_Imie" layoutX="56.0" layoutY="246.0" promptText="Imię" />
+      <TextField fx:id="txt_Nazwisko" layoutX="56.0" layoutY="303.0" promptText="Nazwisko" />
+      <TextField fx:id="txt_Pesel" layoutX="56.0" layoutY="355.0" promptText="Pesel" />
+      <Text fill="#3196de" layoutX="366.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rezerwacja wizyty">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="txt_WyborDzien" layoutX="544.0" layoutY="192.0" prefHeight="31.0" prefWidth="224.0" />
+      <Text layoutX="580.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz dzień wizyty" />
+      <Text layoutX="578.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybiez godzinę wizyty" />
+      <Text layoutX="598.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz lekarza" />
+      <Button fx:id="btn_book" layoutX="351.0" layoutY="481.0" mnemonicParsing="false" onAction="#handleBook" prefHeight="115.0" prefWidth="281.0" styleClass="topPane" stylesheets="@../css/style.css" text="Zarezerwuj" />
+      <ComboBox fx:id="txt_WyborGodzina" layoutX="544.0" layoutY="280.0" prefHeight="31.0" prefWidth="224.0" />
+      <ComboBox fx:id="txt_WyborLekarz" layoutX="544.0" layoutY="376.0" prefHeight="31.0" prefWidth="224.0" />
+      <Text fill="#3196de" layoutX="56.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyszukaj pacjenta">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

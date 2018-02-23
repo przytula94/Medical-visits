@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="780.0" prefWidth="1705.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="patient.DodajPacjenta">
+    <children>
+        <Button fx:id="btn_addPatient" layoutX="151.0" layoutY="659.0" onAction="#handleAddPatient" prefHeight="31.0" prefWidth="96.0" styleClass="topPane" text="Dodaj Pacjenta" />
+      <TextField fx:id="txt_Imie" layoutX="253.0" layoutY="175.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="txt_Nazwisko" layoutX="586.0" layoutY="175.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="txt_PESEL" layoutX="253.0" layoutY="236.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="txt_Ulica" layoutX="253.0" layoutY="362.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="txt_Miejscowosc" layoutX="586.0" layoutY="363.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="txt_KodPocztowy" layoutX="253.0" layoutY="430.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="196.0" layoutY="179.0" text="Imię" />
+      <Label layoutX="480.0" layoutY="179.0" text="Nazwisko" />
+      <Label layoutX="191.0" layoutY="241.0" text="PESEL" />
+      <Label layoutX="187.0" layoutY="367.0" text="Ulica" />
+      <Label layoutX="480.0" layoutY="367.0" text="Miejscowość" />
+      <Label layoutX="136.0" layoutY="435.0" text="Kod Pocztowy" />
+      <Text fill="#4059a9" layoutX="145.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dane personalne" />
+      <Text fill="#4059a9" layoutX="145.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adres" />
+      <Text fill="#4059a9" layoutX="18.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodawanie pacjenta do bazy">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#4059a9" layoutX="145.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacje dodatkowe" />
+      <TextField fx:id="txt_Telefon" layoutX="253.0" layoutY="574.0" prefHeight="25.0" prefWidth="182.0" />
+      <Text layoutX="185.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefon" />
+      <TextField fx:id="txt_Email" layoutX="586.0" layoutY="574.0" prefHeight="25.0" prefWidth="182.0" />
+      <Text layoutX="480.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" />
+      <Button fx:id="btn_DeletePatient" layoutX="435.0" layoutY="659.0" mnemonicParsing="false" onAction="#handleDeletePatient" prefHeight="31.0" prefWidth="120.0" styleClass="topPane" text="Usuń Pacjenta" />
+      <Button fx:id="btn_EditPatient" layoutX="293.0" layoutY="659.0" mnemonicParsing="false" onAction="#handleEditPatient" prefHeight="31.0" prefWidth="120.0" styleClass="topPane" text="Edytuj Dane" />
+      <TableView fx:id="tablePacjent" layoutX="806.0" layoutY="37.0" prefHeight="735.0" prefWidth="873.0">
+        <columns>
+          <TableColumn fx:id="colImie" prefWidth="84.0" text="Imie" />
+            <TableColumn fx:id="colNazwisko" prefWidth="94.0" text="Nazwisko" />
+            <TableColumn fx:id="colPESEL" prefWidth="113.0" text="PESEL" />
+            <TableColumn fx:id="colUlica" prefWidth="79.0" text="Ulica" />
+            <TableColumn fx:id="colMiejscowosc" prefWidth="106.0" text="Miejscowosc" />
+            <TableColumn fx:id="colKodPocztowy" prefWidth="125.0" text="KodPocztowy" />
+            <TableColumn fx:id="colTelefon" minWidth="0.0" prefWidth="107.0" text="Telefon" />
+            <TableColumn fx:id="colEmail" prefWidth="164.0" text="E-mail" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_BookAppointment" layoutX="33.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleBookAppointment" styleClass="topPane" text="Zarezerwuj wizytę" />
+      <Label fx:id="error_Name" layoutX="253.0" layoutY="205.0" />
+      <Label fx:id="error_Surname" layoutX="586.0" layoutY="205.0" />
+      <Label fx:id="error_PESEL" layoutX="253.0" layoutY="267.0" />
+      <Label fx:id="error_Street" layoutX="257.0" layoutY="394.0" />
+      <Label fx:id="error_PostalCode" layoutX="253.0" layoutY="461.0" />
+      <Label fx:id="error_Phone" layoutX="253.0" layoutY="605.0" />
+      <Label fx:id="error_City" layoutX="586.0" layoutY="394.0" />
+      <Label fx:id="error_Email" layoutX="586.0" layoutY="605.0" />
+      <TextField fx:id="txt_Search" layoutX="600.0" layoutY="39.0" promptText="Wyszukaj Pacjenta" />
+      <Button fx:id="btn_EditVisit" layoutX="158.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleEditVisit" styleClass="topPane" text="Modyfikuj wizytę" />
+      <Button fx:id="btn_DeleteVisit" layoutX="278.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleDeleteVisit" styleClass="topPane" text="Usuń wizytę" />
+      
+      
+    </children>
+   <stylesheets>
+      <URL value="@../css/error.css" />
+      <URL value="@../css/style.css" />
+   </stylesheets>
+   
+</AnchorPane>

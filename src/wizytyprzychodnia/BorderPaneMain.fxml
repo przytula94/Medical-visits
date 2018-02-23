@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wizytyprzychodnia.MainController">
+   <top>
+      <VBox prefHeight="150.0" prefWidth="997.0" BorderPane.alignment="CENTER">
+         <children>
+              
+               <fx:include fx:id="topMenuButtons" source="TopMenuButtons.fxml" />
+             
+         </children>
+         
+      </VBox>
+   </top>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</BorderPane>
